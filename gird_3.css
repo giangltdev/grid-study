@@ -1,0 +1,28 @@
+.grid-list {
+    display: grid;
+    /* Tương ứng với 4 cột mỗi cột 1fr */
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    /* Sủ dụng auto-fit và auto-fill để làm responsive 
+    * Auto fit: sẽ tự động tăng size ảnh cho đầy wigth của container
+    * Auto fill: Không tự động tăng size cho đầy width
+    */
+    /* Responsive theo dạng lấy tổng độ rộng container / số item
+    nếu dưới 200 thì nhẩy xuống dưới */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(293px, 1fr));
+    grid-gap: 30px;
+    padding: 30px;
+}
+.grid-item {
+    border-radius: 10px;
+    height: 300px;
+}
+.grid-item img {
+    /* img-cover */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Boder kế thừa bên ngoài */
+    border-radius: inherit;
+}

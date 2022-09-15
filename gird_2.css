@@ -1,0 +1,56 @@
+.gird-list {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* Để auto thì sẽ cân theo chiều cao của item cuối 
+    còn để fr thì tất cả bằng nhau */
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+    grid-template-areas: "h1 h2 h3" "h1 h4 h5";
+}
+
+.gird-item:first-child {
+    grid-area: h1;
+}
+
+.gird-item:nth-child(2) {
+    grid-area: h2;
+}
+
+.gird-item:nth-child(3) {
+    grid-area: h3;
+}
+
+.gird-item:nth-child(3) {
+    grid-area: h4;
+}
+
+.gird-item:nth-child(3) {
+    grid-area: h5;
+}
+
+.gird-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    /* Cố định hình ảnh */
+    flex-shrink: 0;
+}
+
+.gird-image-large {
+    height: auto;
+}
+
+.gird-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-content {
+    font-weight: 400;
+    text-align: center;
+    background-color: #eee;
+    /* Kéo cho bằng với item cao nhất */
+    flex: 1;
+}
